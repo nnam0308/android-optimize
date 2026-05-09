@@ -189,6 +189,8 @@ com.android.bbklog
 com.vivo.gallery
 com.google.android.googlequicksearchbox
 com.vivo.weather.provider
+com.vivo.soundrecorder
+com.vivo.calculator
 ) do (
 
 set /a current+=1
@@ -201,6 +203,10 @@ adb shell pm clear %%s >nul
 echo Uninstall
 echo !current!/!total!: Uninstalling "%%s"
 adb shell pm uninstall --user 0 %%s >nul
+
+echo Clear 2
+echo !current!/!total!: Clearing data "%%s"
+adb shell pm clear %%s >nul
 
 )
 
@@ -229,25 +235,54 @@ echo Optimizing Vivo Website...
 adb shell cmd package compile -m space -f com.vivo.website
 
 echo Optimizing Vivo Video Editor...
+adb shell pm clear com.vivo.videoeditor
 adb shell cmd package compile -m space -f com.vivo.videoeditor
+adb shell pm clear com.vivo.videoeditor
 
 echo Optimizing iManager...
+adb shell pm clear com.vivo.imanager
 adb shell cmd package compile -m space -f com.vivo.imanager
+adb shell pm clear com.vivo.imanager
 
 echo Optimizing Vivo Cloud...
+adb shell pm clear com.bbk.cloud
 adb shell cmd package compile -m space -f com.bbk.cloud
+adb shell pm clear com.bbk.cloud
 
 echo Optimizing iTheme...
+adb shell pm clear com.bbk.theme
 adb shell cmd package compile -m space -f com.bbk.theme
+adb shell pm clear com.bbk.theme
 
 echo Optimizing Jovi Home Service Tool...
+adb shell pm clear com.vivo.assistant
 adb shell cmd package compile -m space -f com.vivo.assistant
+adb shell pm clear com.vivo.assistant
 
 echo Optimizing Jovi Home...
+adb shell pm clear com.vivo.hiboard
 adb shell cmd package compile -m space -f com.vivo.hiboard
+adb shell pm clear com.vivo.hiboard
 
 echo Optimizing Vivo Weather Provider...
+adb shell pm clear com.vivo.weather.provider
 adb shell cmd package compile -m space -f com.vivo.weather.provider
+adb shell pm clear com.vivo.weather.provider
+
+echo Optimizing Google Photos...
+adb shell pm clear com.google.android.apps.photos
+adb shell cmd package compile -m space -f com.google.android.apps.photos
+adb shell pm clear com.google.android.apps.photos
+
+echo Optimizing Vivo Camera...
+adb shell pm clear com.android.camera
+adb shell cmd package compile -m space -f com.android.camera
+adb shell pm clear com.android.camera
+
+echo Optimizing Gboard...
+adb shell pm clear com.google.android.inputmethod.latin
+adb shell cmd package compile -m space -f com.google.android.inputmethod.latin
+adb shell pm clear com.google.android.inputmethod.latin
 
 echo.
 echo ==========================================
