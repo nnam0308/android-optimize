@@ -21,7 +21,6 @@ com.shopee.vn
 com.ss.android.ugc.trill
 com.zing.mp3
 com.zing.zalo
-com.google.mainline.telemetry
 com.google.android.setupwizard
 com.google.android.apps.setupwizard.searchselector
 com.vivo.fingerprintui
@@ -118,7 +117,6 @@ com.shopee.vn
 com.ss.android.ugc.trill
 com.zing.mp3
 com.zing.zalo
-com.google.mainline.telemetry
 com.google.android.setupwizard
 com.google.android.apps.setupwizard.searchselector
 com.vivo.fingerprintui
