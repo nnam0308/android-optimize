@@ -188,6 +188,7 @@ com.google.android.apps.youtube.music
 com.android.bbklog
 com.vivo.gallery
 com.google.android.googlequicksearchbox
+com.vivo.weather.provider
 ) do (
 
 set /a current+=1
@@ -229,6 +230,24 @@ adb shell cmd package compile -m space -f com.vivo.website
 
 echo Optimizing Vivo Video Editor...
 adb shell cmd package compile -m space -f com.vivo.videoeditor
+
+echo Optimizing iManager...
+adb shell cmd package compile -m space -f com.vivo.imanager
+
+echo Optimizing Vivo Cloud...
+adb shell cmd package compile -m space -f com.bbk.cloud
+
+echo Optimizing iTheme...
+adb shell cmd package compile -m space -f com.bbk.theme
+
+echo Optimizing Jovi Home Service Tool...
+adb shell cmd package compile -m space -f com.vivo.assistant
+
+echo Optimizing Jovi Home...
+adb shell cmd package compile -m space -f com.vivo.hiboard
+
+echo Optimizing Vivo Weather Provider...
+adb shell cmd package compile -m space -f com.vivo.weather.provider
 
 echo.
 echo ==========================================
