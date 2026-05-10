@@ -119,16 +119,12 @@ echo "       Optimizing Apps"
 echo "=========================================="
 echo
 
-printf "Optimize Google Play Services? (y/n): "
-read optgms
+echo "Optimizing Kiwi Browser..."
+adb shell pm clear com.kiwibrowser.browser
+adb shell cmd package compile -m space -f com.kiwibrowser.browser
+adb shell cmd package compile -m verify -f com.kiwibrowser.browser
+adb shell pm clear com.kiwibrowser.browser
 
-if [ "$optgms" = "y" ] || [ "$optgms" = "Y" ]; then
-echo "Optimizing Google Play Services..."
- pm clear com.google.android.gms
- cmd package compile -m space -f com.google.android.gms
- cmd package compile -m verify -f com.google.android.gms
- pm clear com.google.android.gms
-fi
 echo "Optimizing Vivo Global Search..."
  pm clear com.vivo.globalsearch
  cmd package compile -m space -f com.vivo.globalsearch
@@ -219,21 +215,19 @@ echo "Optimizing Gboard..."
  cmd package compile -m verify -f com.google.android.inputmethod.latin
  pm clear com.google.android.inputmethod.latin
 
+printf "Optimize Google Play Services? (y/n): "
+read optgms
+
+if [ "$optgms" = "y" ] || [ "$optgms" = "Y" ]; then
+echo "Optimizing Google Play Services..."
+ pm clear com.google.android.gms
+ cmd package compile -m space -f com.google.android.gms
+ cmd package compile -m verify -f com.google.android.gms
+ pm clear com.google.android.gms
+fi
+
 echo
 echo "=========================================="
 echo "Done."
 echo "=========================================="
-```
-
-Chạy trực tiếp bằng Brevent/Ash:
-
-```sh
-sh -c "$(curl -L https://raw.githubusercontent.com/nnam0308/android-optimize/refs/heads/main/vivo.sh)"
-```
-
-Hoặc:
-
-```sh
-curl -L -o /data/local/tmp/vivo.sh https://raw.githubusercontent.com/nnam0308/android-optimize/refs/heads/main/vivo.sh
-sh /data/local/tmp/vivo.sh
 ```
