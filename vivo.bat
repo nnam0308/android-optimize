@@ -8,6 +8,8 @@ adb wait-for-device
 set /a count=0
 
 for %%s in (
+com.android.vending
+com.google.android.apps.photos
 com.agoda.mobile.consumer
 com.epi
 com.facebook.katana
@@ -104,6 +106,8 @@ echo ==========================================
 echo.
 
 for %%s in (
+com.android.vending
+com.google.android.apps.photos
 com.agoda.mobile.consumer
 com.epi
 com.facebook.katana
