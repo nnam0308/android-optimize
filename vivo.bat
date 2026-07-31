@@ -92,6 +92,9 @@ com.google.android.apps.youtube.music
 com.android.bbklog
 com.vivo.gallery
 com.google.android.googlequicksearchbox
+com.vivo.weather.provider
+com.vivo.soundrecorder
+com.vivo.calculator
 ) do (
 set /a count+=1
 )
