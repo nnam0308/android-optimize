@@ -90,7 +90,6 @@ com.google.android.calendar
 com.android.emergency
 com.google.android.apps.youtube.music
 com.android.bbklog
-com.vivo.gallery
 com.google.android.googlequicksearchbox
 com.vivo.weather.provider
 com.vivo.soundrecorder
@@ -191,7 +190,6 @@ com.google.android.calendar
 com.android.emergency
 com.google.android.apps.youtube.music
 com.android.bbklog
-com.vivo.gallery
 com.google.android.googlequicksearchbox
 com.vivo.weather.provider
 com.vivo.soundrecorder
